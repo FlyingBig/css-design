@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>日历</title>
+		<link rel="stylesheet" type="text/css" href="calender.css"/>
+	</head>
+	<style type="text/css">
+		.bigdiv{
+			width: 700px;
+			height: 500px;
+		}
+	</style>
+	<body>
+		<div class="bigdiv"></div>
+	</body>
+</html>
+<script src="jquery-1.9.1.js"></script>
+<script src="calendars.js"></script>
+<script>
+	calendar.getYMD() //获取年月日
+		.createCalendarHTML() //创建日历
+		.createMemorandumHTML(); //创建备忘录
+</script>

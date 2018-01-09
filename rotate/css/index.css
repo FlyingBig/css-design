@@ -1,0 +1,244 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+/* ======================= Rotate ===========================*/
+body{
+	background: black;
+}
+.content {
+  position: relative;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+div[class*='card-'] {
+  position: relative;
+  margin: 40px auto;
+  width: 200px;
+  height: 200px;
+  -webkit-perspective: 500px;
+          perspective: 500px;
+}
+.card h1 {
+  font-size: 2em;
+  font-weight: 600;
+  padding: 1em 0 0 1em;
+}
+.card{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  border-radius: 2px;
+}
+.card:last-of-type {
+  background-color: #324b77;
+  z-index: 80;
+}
+.card:nth-last-of-type(2) {
+  background-color: #4b70b2;
+  z-index: 90;
+}
+.card:first-of-type {
+  background-color: cornflowerblue;
+  z-index: 100;
+}
+.card-first:hover .card:first-of-type {
+  -webkit-transform: rotateX(-20deg) translateZ(0px);
+          transform: rotateX(-20deg) translateZ(0px);
+}
+.card-first:hover .card:nth-last-of-type(2) {
+  -webkit-transform: rotateX(-20deg) translateZ(-100px);
+          transform: rotateX(-20deg) translateZ(-100px);
+}
+.card-first:hover .card:last-of-type {
+  -webkit-transform: rotateX(-20deg) translateZ(-200px);
+          transform: rotateX(-20deg) translateZ(-200px);
+}
+.card-second:hover .card{
+  -webkit-transform-origin: 0 200px;
+		  transform-origin: 0 200px;
+}
+.card-second:hover .card:first-of-type {
+  -webkit-transform: rotate(-10deg) ;
+          transform: rotate(-10deg);
+}
+.card-second:hover .card:nth-last-of-type(2) {
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+}
+.card-second:hover .card:last-of-type {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.card-third .card{
+	background: red;
+}
+.card-third:hover .card:first-of-type {
+  -webkit-transform: scale(1,0.85);
+          transform: scale(1,0.85);
+          top: 0;
+          left: 0;
+}
+.card-third:hover .card:nth-last-of-type(2) {
+  -webkit-transform: scale(0.45,0.3);
+          transform: scale(0.45,0.3);
+          top: 60%;
+          left: -25%;
+}
+.card-third:hover .card:last-of-type {
+  -webkit-transform: scale(0.45,0.3);
+          transform: scale(0.45,0.3);
+          top: 60%;
+          left: 25%;
+}
+/* ################### Clock ###################*/
+.clock{
+	position: relative;
+}
+.num{
+	position: absolute;
+	top: 35px;
+	left: 37.8%;
+	width: 330px;
+	height: 330px;
+	background: white;
+	border-radius: 50%;
+	z-index: 7;
+	box-shadow: black 0 0 10px
+}
+.clockall{	
+	position: relative;
+	margin: 0 auto;
+	border-radius: 50%;
+	width: 400px;
+	height: 400px;
+	background: lightblue;
+	box-shadow: white 0 0 10px;
+	}
+.divpoint{
+    width: 195px;
+    height: 2px;
+    transform-origin: 0% 50%;
+    z-index: 7;
+    position: absolute;
+    top: 199px;
+    left: 200px;
+    ;
+}
+.showpoint{
+	float: right;
+	width: 20px;
+	height: 2px;
+	background: black;
+}
+.divnum{
+	width: 150px;
+    height: 60px;
+    transform-origin: 0% 50%;
+    z-index: 7;
+    position: absolute;
+    top: 135px;
+    left: 165px;
+}
+.shownum{
+	float: right;
+	text-align: center;
+	line-height: 60px;
+	width: 20px;
+	height: 2px;
+	font-size: 18px;
+	font-weight: bold;
+}
+.needles{
+	float: left;
+	position: absolute;
+	top: 48%;
+	left: 49%;
+	width: 30px;
+	height: 30px;
+	background: blue;
+	z-index: 8;	
+	border-radius: 50%;
+}
+.shownum{
+	height: 100%;
+}
+.miao{
+	position: absolute;
+	top: 10px;
+	width: 180px;
+	height: 2px;
+	box-shadow: black 0 2px 10px;
+	transform-origin: 8% 52%;
+	background: red;
+}
+.fen{
+	position: absolute;
+	top: 10px;
+	width: 150px;
+	height: 2px;
+	box-shadow: black 0 2px 10px;
+	transform-origin: 8% 52%;
+	background: purple;
+}
+.shi{
+	position: absolute;
+	top: 10px;
+	width: 120px;
+	height: 2px;
+	box-shadow: black 0 2px 10px;
+	transform-origin: 10% 52%;
+	background: black;
+}
+/* ################### Alert  ###################*/
+.alertcontent{
+	position: relative;
+	width: 50%;
+	height: 300px;
+}
+.more{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background: red;
+	line-height: 80px;
+	font-size: 50px;
+	font-weight: bold;
+	text-align: center;
+	z-index: 7;
+}
+div[class*="menu"]{
+	position: absolute;
+	top: 50%;
+	left: 50%;	
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background: lightblue;
+	color: black;
+	text-align: center;
+	line-height: 80px;
+	font-size: 20px;
+	font-weight: bold;
+}
+.menuone{
+	-webkit-transition: all ease-in-out 0.3s;
+}
+.menutwo{
+	-webkit-transition: all ease-in 0.3s;
+}
+.menuthree{
+	-webkit-transition: all linear 0.3s;
+}
+.menufour{
+	-webkit-transition: all ease-out 0.3s;
+}
+
